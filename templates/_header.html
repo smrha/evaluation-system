@@ -1,3 +1,4 @@
+{% load static %}
 <nav
   class="bg-white border-b border-gray-200 px-4 py-2.5 dark:bg-gray-800 dark:border-gray-700 fixed left-0 right-0 top-0 z-50"
 >
@@ -42,13 +43,13 @@
         class="flex items-center justify-between mr-4"
       >
         <img
-          src="https://flowbite.s3.amazonaws.com/logo.svg"
+          src="{% static 'img/logo/favicon.png' %}"
           class="ml-3 h-8"
           alt="Flowbite Logo"
         />
         <span
           class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
-          >Flowbite</span
+          >جهاددانشگاهی واحد استان البرز</span
         >
       </a>
     </div>
@@ -81,7 +82,7 @@
         <div
           class="block py-2 px-4 text-base font-medium text-center text-gray-700 bg-gray-50 dark:bg-gray-600 dark:text-gray-300"
         >
-          Notifications
+          پیام ها
         </div>
         <div>
           <a
@@ -149,7 +150,7 @@
                 clip-rule="evenodd"
               ></path>
             </svg>
-            View all
+            همه پیام ها
           </div>
         </a>
       </div>
@@ -159,7 +160,7 @@
         data-dropdown-toggle="apps-dropdown"
         class="p-2 text-gray-500 rounded-lg hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
       >
-        <span class="sr-only">View notifications</span>
+        <span class="sr-only">همه پیام ها</span>
         <!-- Icon -->
         <svg
           class="w-6 h-6"
@@ -198,7 +199,7 @@
                 d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"
               ></path>
             </svg>
-            <div class="text-sm text-gray-900 dark:text-white">Users</div>
+            <div class="text-sm text-gray-900 dark:text-white">کاربران</div>
           </a>
 
           <a
@@ -218,7 +219,7 @@
                 clip-rule="evenodd"
               ></path>
             </svg>
-            <div class="text-sm text-gray-900 dark:text-white">Profile</div>
+            <div class="text-sm text-gray-900 dark:text-white">حساب کاربری</div>
           </a>
           <a
             href="#"
@@ -239,7 +240,7 @@
                 d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
               ></path>
             </svg>
-            <div class="text-sm text-gray-900 dark:text-white">Logout</div>
+            <div class="text-sm text-gray-900 dark:text-white">خروج</div>
           </a>
         </div>
       </div>
@@ -279,7 +280,7 @@
             <a
               href="#"
               class="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
-              >My profile</a
+              >تنظیمات کاربر</a
             >
           </li>
         </ul>
@@ -292,7 +293,7 @@
             <a
               href="#"
               class="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-              >Sign out</a
+              >خروج</a
             >
           </li>
         </ul>
