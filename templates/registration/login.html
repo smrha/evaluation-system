@@ -1,4 +1,7 @@
-{% extends "_base.html" %} {% block title %}Log-in{% endblock %} 
+{% extends "_login-base.html" %}
+{% load static %}
+
+{% block title %}ورود به سامانه{% endblock %} 
 {% block content %}
 <section class="bg-gray-50 dark:bg-gray-900">
   <div
@@ -10,24 +13,21 @@
     >
       <img
         class="w-8 h-8 mr-2"
-        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg"
+        src="{% static 'img/logo/favicon.png' %}"
         alt="logo"
       />
-      Flowbite
     </a>
     <div
       class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700"
     >
       <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
         <h1
-          class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white"
+          class="text-xl text-center font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white"
         >
-          Sign in to your account
+          ورود به سامانه ارزیابی عملکرد
         </h1>
         {% if form.errors %}
-        <p>Your username and password didn't match. Please try again.</p>
-        {% else %}
-        <p>Please, use the following form to log-in:</p>
+        <p class="text-right"> نام کاربری یا رمز ورود اشتباه است.</p>
         {% endif %}
         <form
           class="space-y-4 md:space-y-6"
@@ -66,7 +66,7 @@
             />
           </div>
           {% endcomment %}
-          <div class="flex items-center justify-between">
+          {% comment %} <div class="flex items-center justify-between">
             <div class="flex items-start">
               <div class="flex items-center h-5">
                 <input
@@ -88,21 +88,13 @@
               class="text-sm font-medium text-teal-600 hover:underline dark:text-teal-500"
               >Forgot password?</a
             >
-          </div>
+          </div> {% endcomment %}
           <button
             type="submit"
             class="w-full text-white bg-teal-600 hover:bg-teal-700 focus:ring-4 focus:outline-none focus:ring-teal-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-teal-600 dark:hover:bg-teal-700 dark:focus:ring-teal-800"
           >
-            Sign in
+            ورود
           </button>
-          <p class="text-sm font-light text-gray-500 dark:text-gray-400">
-            Don’t have an account yet?
-            <a
-              href="#"
-              class="font-medium text-teal-600 hover:underline dark:text-teal-500"
-              >Sign up</a
-            >
-          </p>
         </form>
       </div>
     </div>

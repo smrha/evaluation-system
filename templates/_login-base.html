@@ -4,7 +4,7 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -19,24 +19,12 @@
 
 </head>
 
-<body class="bg-green-50">
+<body class="bg-white">
 
     <div class="container mx-auto mt-4">
-        <div class="antialiased bg-gray-50 dark:bg-gray-900">
-
-            {%  include '_header.html'%}
-
-            {%  include '_sidebar.html'%}    
-
-            <main class="p-4 md:mr-64 h-auto pt-20">
-                {% block content %}
-                {% endblock content %}
-            </main>
-    
-        </div>
+        {% block content %}
+        {% endblock content %}
     </div>
-
-    {% include '_footer.html' %}
 
     <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
 </body>

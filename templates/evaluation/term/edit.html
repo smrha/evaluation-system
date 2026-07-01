@@ -1,0 +1,26 @@
+{% extends "_base.html" %} {% block title %}Dashboard{% endblock %} 
+{% block content %}
+<section class="bg-white dark:bg-gray-900">
+  <div class="py-8 px-4 mx-auto max-w-2xl lg:py-16">
+      <h2 class="mb-4 text-xl font-bold text-gray-900 dark:text-white">افزودن دوره ارزیابی</h2>
+      <form method='POST' >
+            {% csrf_token %}
+          <div class="grid gap-4 sm:grid-cols-1 sm:gap-6">
+              <div class="sm:col-span-1">
+                  <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{ form.title.label }}</label>
+                  {{ form.title }}
+              </div>
+              
+              <div class="w-full">
+                  <label for="price" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{ form.is_active.label }}</label>
+                  {{ form.is_active }}
+              </div>
+              
+          </div>
+          <button type="submit" class="inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-teal-700 rounded-lg focus:ring-4 focus:ring-teal-200 dark:focus:ring-teal-900 hover:bg-teal-800">
+              افزودن
+          </button>
+      </form>
+  </div>
+</section>
+{% endblock %}
