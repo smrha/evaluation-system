@@ -21,11 +21,19 @@
 
 <body class="bg-green-50">
 
-    {% comment %} {% include '_navbar.html' %} {% endcomment %}
-
     <div class="container mx-auto mt-4">
-        {% block content %}
-        {% endblock content %}
+        <div class="antialiased bg-gray-50 dark:bg-gray-900">
+
+            {%  include '_header.html'%}
+
+            {%  include '_sidebar.html'%}    
+
+            <main class="p-4 md:mr-64 h-auto pt-20">
+                {% block content %}
+                {% endblock content %}
+            </main>
+    
+        </div>
     </div>
 
     {% include '_footer.html' %}
